@@ -4,6 +4,10 @@ body {
   line-height: 1;
 }
 
+/* Reset */
+
+/* Reset */
+
 textarea {
   background: transparent;
   border: none;
@@ -23,6 +27,12 @@ textarea {
 
 .description {
   white-space: pre-wrap;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .time-block {
@@ -48,7 +58,7 @@ textarea {
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #6fa8dc;
   color: white;
 }
 
@@ -61,7 +71,7 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #45818e;
   color: white;
 }
 
