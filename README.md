@@ -1,4 +1,4 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# 05 Module 5: Work Day Scheduler
 
 ## Description
 
