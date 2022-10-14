@@ -12,14 +12,14 @@ var fiveBlock = $("#ninth-block");
 
 // An array of all the time blocks
 let timeBlockArray = [
-    nineBlock, 
-    tenBlock, 
-    elevenBlock, 
-    twelveBlock, 
-    oneBlock, 
-    twoBlock, 
-    threeBlock, 
-    fourBlock, 
+    nineBlock,
+    tenBlock,
+    elevenBlock,
+    twelveBlock,
+    oneBlock,
+    twoBlock,
+    threeBlock,
+    fourBlock,
     fiveBlock
 ];
 
@@ -41,34 +41,34 @@ currentDay.text(moment().format("MMMM Do, YYYY"));
 
 // Compares the time of each block to the current time and changes the color of the textbox 
 function changeBlockColor() {
-    
-    
+
+
     var currentTime = 0;
-    
+
     // Changes current time to a number and adds twelve if time is after noon
     function getCurrentTime() {
-        
-        let now = moment(). format("h a");
-        
+
+        let now = moment().format("h a");
+
         // Changes current hour from strong to number 
-        let hour = parseInt(moment(). format("h"), 10);
-    
+        let hour = parseInt(moment().format("h"), 10);
+
         // Checks if time is "am" or  12pm and returns current time as a number
         if (now.includes("am") || hour === 12) {
             currentTime = hour;
             return currentTime;
         }
-    
+
         // Checks if time is "pm" and not 12pm and returns current time plus 12
         if (now.includes("pm") && hour !== 12) {
             currentTime = hour + 12;
             return currentTime;
         }
-        
+
     }
 
     for (i = 0; i < timeBlockArray.length; i++) {
-        
+
         // Calls the getCuurentTime function to return the current time as a number in 24hr format
         getCurrentTime();
 
@@ -105,72 +105,85 @@ function saveEvent(timeString, someBlock) {
     localStorage.setItem(timeString, JSON.stringify(newEvent));
 }
 
-saveNine.on("click", function() {
+saveNine.on("click", function () {
     event.preventDefault();
 
     saveEvent("nine", nineBlock);
 });
 
-saveTen.on("click", function() {
-    
+saveTen.on("click", function () {
+
     console.log("save 10");
     saveEvent("ten", tenBlock);
 })
 
-saveEleven.on("click", function() {
-    
+saveEleven.on("click", function () {
+
     console.log("save 11");
     saveEvent("eleven", elevenBlock);
 })
 
-saveTwelve.on("click", function() {
-    
+saveTwelve.on("click", function () {
+
     console.log("save 12");
     saveEvent("twelve", twelveBlock);
 })
 
-saveOne.on("click", function() {
-    
+saveOne.on("click", function () {
+
     console.log("save 1");
     saveEvent("one", oneBlock);
 })
 
-saveTwo.on("click", function() {
-    
+saveTwo.on("click", function () {
+
     console.log("save 2");
     saveEvent("two", twoBlock);
 })
 
-saveThree.on("click", function() {
-    
+saveThree.on("click", function () {
+
     console.log("save 3");
     saveEvent("three", threeBlock);
 })
 
-saveFour.on("click", function() {
-    
+saveFour.on("click", function () {
+
     console.log("save 4");
     saveEvent("four", fourBlock);
 })
 
-saveFive.on("click", function() {
-    
+saveFive.on("click", function () {
+
     console.log("save 5");
     saveEvent("five", fiveBlock);
 })
 
 // Loads saved events on to the screen
-function loadSchedule(storageString, someBlock) {
-    
+function loadSchedule() {
+
+    let eventNameArray = [
+        "nine",
+        "ten",
+        "eleven",
+        "twelve",
+        "one",
+        "two",
+        "three",
+        "four",
+        "five"
+    ]
+
     // make an array of strings that correspoind to the event names
     // Loops through all timeblocks and loads saved events
-    // for (let i = 0; i < timeBlockArray.length; i++) {
-    //     let newEvent = JSON.parse(localStorage.getItem(storageString));
+    for (let i = 0; i < timeBlockArray.length; i++) {
+        let newEvent = JSON.parse(localStorage.getItem(eventNameArray[i]));
 
-    //     someBlock.text(newEvent.event);
+        timeBlockArray[i].text(newEvent.event);
 
-    let newEvent = JSON.parse(localStorage.getItem("nine"));
-    nineBlock.text(newEvent.event);
+        //     let newEvent = JSON.parse(localStorage.getItem("nine"));
+        //     nineBlock.text(newEvent.event);
+    }
 }
 
 loadSchedule();
