@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="A simple app to help you keep track of your daily work schedule" />
+
+  <!-- Title -->
+  <title>Work Day Scheduler</title>
 
   <!-- Calls Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -22,81 +26,103 @@
 </head>
 
 <body>
+
+  <!-- Jumbotron -->
   <header class="jumbotron">
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <!-- Date displayed here -->
     <p id="currentDay" class="lead"></p>
   </header>
-  <div class="container col-12">
-    <!-- Timeblocks go here -->
 
-    <!-- First -->
+  <!-- Timetable Blocks -->
+  <div class="container col-12">
+
+    <!-- First - 9 AM -->
     <div class="time-block row pl-1 pr-1 pl-lg-0 pr-lg-0 ml-lg-1 mr-lg-1">
       <p class="hour col-2 col-md-1 col-lg-1 col-xl-1 pt-4">9 AM</p>
-      <textarea name="first-block" id="first-block" cols="28" rows="3" class="col-8 col-md-10" data-time="9"></textarea>
-      <button id="first-button" type="submit" class="saveBtn p-4 col-2 col-md-1"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
+      <textarea name="first-block" id="first-block" cols="28" rows="3" class="col-8 col-md-10" data-time="9"
+        aria-label="9 AM schedule"></textarea>
+      <button id="first-button" type="submit" class="saveBtn p-4 col-2 col-md-1" aria-label="Save 9 AM Schedule"><i
+          class="fa-solid fa-floppy-disk fa-xl"></i></button>
     </div>
 
-    <!-- Second -->
+    <!-- Second - 10 AM  -->
     <div class="time-block row pl-1 pr-1 pl-lg-0 pr-lg-0 ml-lg-1 mr-lg-1">
       <p class="hour col-2 col-md-1 col-lg-1 col-xl-1 pt-4">10 AM</p>
-      <textarea name="second-block" id="second-block" cols="28" rows="3" class="col-8 col-md-10" data-time="10"></textarea>
-      <button id="second-button" type="submit" name="second-block" class="saveBtn p-4 col-2 col-md-1"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
+      <textarea name="second-block" id="second-block" cols="28" rows="3" class="col-8 col-md-10" data-time="10"
+        aria-label="10 AM schedule"></textarea>
+      <button id="second-button" type="submit" name="second-block" class="saveBtn p-4 col-2 col-md-1"
+        aria-label="Save 10 AM Schedule"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
     </div>
 
-    <!-- Third -->
+    <!-- Third - 11 AM -->
     <div class="time-block row pl-1 pr-1 pl-lg-0 pr-lg-0 ml-lg-1 mr-lg-1">
       <p class="hour col-2 col-md-1 col-lg-1 col-xl-1 pt-4">11 AM</p>
-      <textarea name="third-block" id="third-block" cols="28" rows="3" class="col-8 col-md-10" data-time="11"></textarea>
-      <button id="third-button" type="submit" name="third-block" class="saveBtn p-4 col-2 col-md-1"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
+      <textarea name="third-block" id="third-block" cols="28" rows="3" class="col-8 col-md-10" data-time="11"
+        aria-label="11 AM schedule"></textarea>
+      <button id="third-button" type="submit" name="third-block" class="saveBtn p-4 col-2 col-md-1"
+        aria-label="Save 11 AM Schedule"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
     </div>
 
-    <!-- Fourth -->
+    <!-- Fourth - 12 PM -->
     <div class="time-block row pl-1 pr-1 pl-lg-0 pr-lg-0 ml-lg-1 mr-lg-1">
       <p class="hour col-2 col-md-1 col-lg-1 col-xl-1 pt-4">12 PM</p>
-      <textarea name="fourth-block" id="fourth-block" cols="28" rows="3" class="col-8 col-md-10" data-time="12"></textarea>
-      <button id="fourth-button" type="submit" name="fourth-block" class="saveBtn p-4 col-2 col-md-1"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
+      <textarea name="fourth-block" id="fourth-block" cols="28" rows="3" class="col-8 col-md-10" data-time="12"
+        aria-label="12 PM schedule"></textarea>
+      <button id="fourth-button" type="submit" name="fourth-block" class="saveBtn p-4 col-2 col-md-1"
+        aria-label="Save 12 PM Schedule"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
     </div>
 
-    <!-- Fifth -->
+    <!-- Fifth - 1 PM -->
     <div class="time-block row pl-1 pr-1 pl-lg-0 pr-lg-0 ml-lg-1 mr-lg-1">
       <p class="hour col-2 col-md-1 col-lg-1 col-xl-1 pt-4">1 PM</p>
-      <textarea name="fifth-block" id="fifth-block" cols="28" rows="3" class="col-8 col-md-10" data-time="13"></textarea>
-      <button id="fifth-button" type="submit" name="fifth-block" class="saveBtn p-4 col-2 col-md-1"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
+      <textarea name="fifth-block" id="fifth-block" cols="28" rows="3" class="col-8 col-md-10" data-time="13"
+        aria-label="1 PM schedule"></textarea>
+      <button id="fifth-button" type="submit" name="fifth-block" class="saveBtn p-4 col-2 col-md-1"
+        aria-label="Save 1 PM Schedule"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
     </div>
 
-    <!-- Sixth -->
+    <!-- Sixth - 2 PM -->
     <div class="time-block row pl-1 pr-1 pl-lg-0 pr-lg-0 ml-lg-1 mr-lg-1">
       <p class="hour col-2 col-md-1 col-lg-1 col-xl-1 pt-4">2 PM</p>
-      <textarea name="sixth-block" id="sixth-block" cols="28" rows="3" class="col-8 col-md-10" data-time="14"></textarea>
-      <button id="sixth-button" type="submit" name="sixth-block" class="saveBtn p-4 col-2 col-md-1"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
+      <textarea name="sixth-block" id="sixth-block" cols="28" rows="3" class="col-8 col-md-10" data-time="14"
+        aria-label="2 PM schedule"></textarea>
+      <button id="sixth-button" type="submit" name="sixth-block" class="saveBtn p-4 col-2 col-md-1"
+        aria-label="Save 2 PM Schedule"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
     </div>
 
-    <!-- Seventh -->
+    <!-- Seventh - 3 PM -->
     <div class="time-block row pl-1 pr-1 pl-lg-0 pr-lg-0 ml-lg-1 mr-lg-1">
       <p class="hour col-2 col-md-1 col-lg-1 col-xl-1 pt-4">3 PM</p>
-      <textarea name="seventh-block" id="seventh-block" cols="28" rows="3" class="col-8 col-md-10" data-time="15"></textarea>
-      <button id="seventh-button" type="submit" name="seventh-block" class="saveBtn p-4 col-2 col-md-1"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
+      <textarea name="seventh-block" id="seventh-block" cols="28" rows="3" class="col-8 col-md-10" data-time="15"
+        aria-label="3 PM schedule"></textarea>
+      <button id="seventh-button" type="submit" name="seventh-block" class="saveBtn p-4 col-2 col-md-1"
+        aria-label="Save 12 PM Schedule"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
     </div>
 
-    <!-- Eighth -->
+    <!-- Eighth - 4 PM -->
     <div class="time-block row pl-1 pr-1 pl-lg-0 pr-lg-0 ml-lg-1 mr-lg-1">
       <p class="hour col-2 col-md-1 col-lg-1 col-xl-1 pt-4">4 PM</p>
-      <textarea name="eighth-block" id="eighth-block" cols="28" rows="3" class="col-8 col-md-10" data-time="16"></textarea>
-      <button id="eighth-button" type="submit" name="eighth-block" class="saveBtn p-4 col-2 col-md-1"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
+      <textarea name="eighth-block" id="eighth-block" cols="28" rows="3" class="col-8 col-md-10" data-time="16"
+        aria-label="4 PM schedule"></textarea>
+      <button id="eighth-button" type="submit" name="eighth-block" class="saveBtn p-4 col-2 col-md-1"
+        aria-label="Save 4 PM Schedule"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
     </div>
 
-    <!-- Ninth -->
+    <!-- Ninth - 5 PM -->
     <div class="time-block row pl-1 pr-1 pl-lg-0 pr-lg-0 ml-lg-1 mr-lg-1">
       <p class="hour col-2 col-md-1 col-lg-1 col-xl-1 pt-4">5 PM</p>
-      <textarea name="ninth-block" id="ninth-block" cols="28" rows="3" class="col-8 col-md-10" data-time="17"></textarea>
-      <button id="ninth-button" type="submit" name="ninth-block" class="saveBtn p-4 col-2 col-md-1"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
+      <textarea name="ninth-block" id="ninth-block" cols="28" rows="3" class="col-8 col-md-10"
+        data-time="17" aria-label="Save 5 PM Schedule"></textarea>
+      <button id="ninth-button" type="submit" name="ninth-block" class="saveBtn p-4 col-2 col-md-1"
+        aria-label="Save 5 PM Schedule"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
     </div>
   </div>
 
   <!-- Link to JQuery updated -->
-  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
 
   <!-- Link to Moments.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

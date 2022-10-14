@@ -93,9 +93,7 @@ function changeBlockColor() {
 // Runs the changeBlockColor function every milisecond
 setInterval(changeBlockColor, 1);
 
-// Event Listeners
-
-// Takes a string and a time block and saves value to local storage  (MOVE UP)
+// Takes a string and a time block and saves value to local storage  (see Event Listeners below)
 function saveEvent(timeString, someBlock) {
 
     let newEvent = {
@@ -105,63 +103,57 @@ function saveEvent(timeString, someBlock) {
     localStorage.setItem(timeString, JSON.stringify(newEvent));
 }
 
+
+// Event Listeners
 saveNine.on("click", function () {
-    event.preventDefault();
 
     saveEvent("nine", nineBlock);
 });
 
 saveTen.on("click", function () {
 
-    console.log("save 10");
     saveEvent("ten", tenBlock);
 })
 
 saveEleven.on("click", function () {
 
-    console.log("save 11");
     saveEvent("eleven", elevenBlock);
 })
 
 saveTwelve.on("click", function () {
 
-    console.log("save 12");
     saveEvent("twelve", twelveBlock);
 })
 
 saveOne.on("click", function () {
 
-    console.log("save 1");
     saveEvent("one", oneBlock);
 })
 
 saveTwo.on("click", function () {
 
-    console.log("save 2");
     saveEvent("two", twoBlock);
 })
 
 saveThree.on("click", function () {
 
-    console.log("save 3");
     saveEvent("three", threeBlock);
 })
 
 saveFour.on("click", function () {
 
-    console.log("save 4");
     saveEvent("four", fourBlock);
 })
 
 saveFive.on("click", function () {
 
-    console.log("save 5");
     saveEvent("five", fiveBlock);
 })
 
 // Loads saved events on to the screen
 function loadSchedule() {
 
+    // An array of strings that match object names local storage
     let eventNameArray = [
         "nine",
         "ten",
@@ -174,15 +166,11 @@ function loadSchedule() {
         "five"
     ]
 
-    // make an array of strings that correspoind to the event names
     // Loops through all timeblocks and loads saved events
     for (let i = 0; i < timeBlockArray.length; i++) {
         let newEvent = JSON.parse(localStorage.getItem(eventNameArray[i]));
 
         timeBlockArray[i].text(newEvent.event);
-
-        //     let newEvent = JSON.parse(localStorage.getItem("nine"));
-        //     nineBlock.text(newEvent.event);
     }
 }
 

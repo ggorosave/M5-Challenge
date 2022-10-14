@@ -52,18 +52,22 @@ textarea {
   border-top: 1px dashed #000000;
 }
 
+
 .past {
-  background-color: #d3d3d3;
+  /* Change color for better visibility */
+  background-color: #6E6E6E;
   color: white;
 }
 
 .present {
-  background-color: #6fa8dc;
+  /* Change color for better visibility */
+  background-color: #2052A2;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  /* Change color for better visibility */
+  background-color: #4B7637;
   color: white;
 }
 
@@ -71,7 +75,7 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #45818e;
+  background-color: #134f5c;
   color: white;
 }
 
