@@ -6,7 +6,7 @@ This project is the fourth challenge from the U of A coding bootcamp. It is a si
 
 Through the process of writing this code, I really appreciated how much simpler writing JQuery was compared to vanilla JavaScript. Seeing as JQuery is not utlized as much as it used to be, I'm motivated to look at other options that would help me simplify the process of writing JavaScript. On the other hand, though Bootstrap really simplifies some CSS tools like Grid, it also makes the HTML look cluttered and hard to read. So I will look at ways to simplify using Bootstrap in my future code.  While the code originally used the Moments.js API for dates and time, I decided to use Day.js instead for two reasons. First, while Moment.js seems still commonly used, it has the potentional to slow down some web applications due to it's size and mutability. Second, I wanted to challenge myself to read documentation on a different API, understand it, and implement it in my code.
 
-Deployed Website: [Work Day Scheduler](https://ggorosave.github.io/Work_Scheduler/
+Deployed Website: [Work Day Scheduler](https://ggorosave.github.io/Work_Scheduler/)
 
 ![Work Day Scheduler](./assets/Work%20Day%20Scheduler.png)
 
